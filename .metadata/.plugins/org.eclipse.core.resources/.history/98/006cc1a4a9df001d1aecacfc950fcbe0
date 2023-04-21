@@ -1,0 +1,33 @@
+package milosbogdanovic;
+
+import java.util.Vector;
+
+public class MainVector {
+
+	public static void main(String[] args) {
+
+		Vector<String> spisakFilmova = new Vector<String>();
+
+		// Dodavanje u listu
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("1. Dodavanje u listu: ugrađena metoda .add");
+		System.out.println("----------------------------------------------------------------------------------------");
+		spisakFilmova.add("Kum");
+		spisakFilmova.add("Matriks");
+		spisakFilmova.add("Paklene ulice");
+
+		// Dodavanje u listu zadavanjem indeksa
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("2. Dodavanje u listu na određenu poziciju: ugrađena metoda .add(index, element)");
+		System.out.println("----------------------------------------------------------------------------------------");
+		spisakFilmova.add(3, "Gospodar prstenova");
+
+		// Ispisivanje kapaciteta vektora
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("3. Ispisivanje kapaciteta vektora: ugrađena metoda .capacity");
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("Kapacitet vektora: " + spisakFilmova.capacity());
+
+	}
+
+}

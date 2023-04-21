@@ -1,0 +1,45 @@
+package milosbogdanovic;
+
+import java.util.Vector;
+
+public class MainVector {
+
+	public static void main(String[] args) {
+
+		Vector<String> spisakFilmova = new Vector<String>();
+
+		// Dodavanje u listu
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("1. Dodavanje u listu: ugrađena metoda .add");
+		System.out.println("----------------------------------------------------------------------------------------");
+		spisakFilmova.add("Kum");
+		spisakFilmova.add("Matriks");
+		spisakFilmova.add("Paklene ulice");
+		spisakFilmova.add("Kralj džungle");
+		spisakFilmova.add("Proba");
+
+		// Dodavanje u listu zadavanjem indeksa
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("2. Dodavanje u listu na određenu poziciju: ugrađena metoda .add(index, element)");
+		System.out.println("----------------------------------------------------------------------------------------");
+		spisakFilmova.add(3, "Gospodar prstenova");
+
+		// Ispisivanje kapaciteta vektora
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("3. Ispisivanje kapaciteta vektora: ugrađena metoda .capacity");
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("Kapacitet vektora: " + spisakFilmova.capacity());
+
+		// Provera da li je lista prazna ili nije
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("7. Provera da li je lista prazna: ugrađena metoda .isEmpty");
+		System.out.println("----------------------------------------------------------------------------------------");
+		if (spisakFilmova.isEmpty()) {
+			System.out.println("Lista filmova je prazna.");
+		} else {
+			System.out.println("Lista filmova nije prazna.");
+		}
+
+	}
+
+}

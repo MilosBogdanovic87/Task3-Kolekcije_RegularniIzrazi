@@ -1,0 +1,100 @@
+package milosbogdanovic;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainArrayList {
+
+	public static void main(String[] args) {
+
+		List<String> spisakUdruzenja = new ArrayList<String>();
+
+		// dodavanje u listu
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("1. Dodavanje u listu: ugrađena metoda .add");
+		System.out.println("----------------------------------------------------------------------------------------");
+		spisakUdruzenja.add("Udruženje pčelara Beograd");
+		spisakUdruzenja.add("Matica Niš");
+		spisakUdruzenja.add("Udruženje pčelara Novi Sad");
+
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("2. Dodavanje u listu na određenu poziciju: ugrađena metoda .add(index, element)");
+		System.out.println("----------------------------------------------------------------------------------------");
+		spisakUdruzenja.add(3, "Udruženje pčelara Bor");
+
+		// prolazak kroz listu unapređenom for petljom
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("3. Prolazak kroz listu unapređenom for petljom: ");
+		System.out.println("----------------------------------------------------------------------------------------");
+		for (String s : spisakUdruzenja) {
+			System.out.println(s);
+		}
+
+		// Vraćanje elementa sa zadate pozicije
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("4. Ugrađena metoda .get vraća element sa zadate pozicije");
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println(spisakUdruzenja.get(2));
+
+		// Provera da li je lista prazna ili nije
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("5. Provera da li je lista prazna: ugrađena metoda .isEmpty");
+		System.out.println("----------------------------------------------------------------------------------------");
+		if (spisakUdruzenja.isEmpty()) {
+			System.out.println("Lista udruženja je prazna.");
+		} else {
+			System.out.println("Lista udruženja nije prazna.");
+		}
+
+		// Metoda za prebacivanje liste u niz
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("6. Prebacivanje liste u niz: ugrađena metoda .toArray");
+		System.out.println("----------------------------------------------------------------------------------------");
+		String[] nizUdruzenje = new String[spisakUdruzenja.size()];
+		spisakUdruzenja.toArray(nizUdruzenje);
+
+		for (String s : nizUdruzenje) {
+			System.out.println(s);
+		}
+
+		// Proverava da li lista sadrži dati element
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("7. Provera da li lista sadrži dati element: ugrađena metoda .contains");
+		System.out.println("----------------------------------------------------------------------------------------");
+		boolean sadrzi = spisakUdruzenja.contains("Udruženje pčelara Bor");
+		if (sadrzi) {
+			System.out.println("Trazeni element se nalazi u zadatoj kolekciji");
+		} else {
+			System.out.println("Trazeni element se ne nalazi u zadatoj kolekciji");
+		}
+
+		// Vraća indeks prvog pojavljivanja datog elementa u listi
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("8. Vraća indeks prvog pojavljivanja datog elementa u listi: ugrađena metoda .indexOf");
+		System.out.println("----------------------------------------------------------------------------------------");
+		int index = spisakUdruzenja.indexOf("Udruženje pčelara Bor");
+		System.out.println("Indeks elementa \"Udruženje pčelara Bor\" je: " + index);
+
+		// Ispisivanje broja elemenata u listi
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("9. Vraća broj elemenata u listi: ugrađena metoda .size");
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("Broj elemenata u listi: " + spisakUdruzenja.size());
+
+		// Uklanjanje elementa sa datom pozicijom iz liste
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("10. Uklanjanje elementa sa datom pozicijom: ugrađena metoda .remove");
+		System.out.println("----------------------------------------------------------------------------------------");
+		spisakUdruzenja.remove(2);
+		for (String s : spisakUdruzenja) {
+			System.out.println(s);
+		}
+
+		spisakUdruzenja.set(2, "Udruženje pčelara Bor");
+		for (String s : spisakUdruzenja) {
+			System.out.println(s);
+		}
+
+	}
+
+}

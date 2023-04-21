@@ -1,0 +1,50 @@
+package milosbogdanovic;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class MainSortedMap {
+	public static void main(String[] args) {
+
+		SortedMap<Integer, String> sifraArtikla = new TreeMap<Integer, String>();
+
+		sifraArtikla.put(1001, "Jabuka");
+		sifraArtikla.put(1002, "Kruška");
+		sifraArtikla.put(1003, "Banana");
+		sifraArtikla.put(1004, "Narandža");
+
+		// Ispis svih stavki na kasi
+		System.out.println("Artikli na kasi: ");
+		for (Map.Entry<Integer, String> entry : sifraArtikla.entrySet()) {
+			System.out.println(entry.getKey() + ": " + entry.getValue());
+		}
+
+		// Prikaz prvog artikla na kasi
+		System.out.println(
+				"Prvi artikal na kasi: " + sifraArtikla.firstKey() + " - " + sifraArtikla.get(sifraArtikla.firstKey()));
+
+		// Prikaz poslednjeg artikla na kasi
+		System.out.println("Poslednji artikal na kasi: " + sifraArtikla.lastKey() + " - "
+				+ sifraArtikla.get(sifraArtikla.lastKey()));
+
+		// Prikaz svih artikala sa šifrom manjom od 1003
+		SortedMap<Integer, String> subMap = sifraArtikla.headMap(1003);
+		System.out.println("Artikli sa šifrom manjom od 1003: ");
+		for (Map.Entry<Integer, String> entry : subMap.entrySet()) {
+			System.out.println(entry.getKey() + ": " + entry.getValue());
+		}
+
+		Set<Integer> kljucevi = sifraArtikla.keySet();
+		Iterator<Integer> iterator = kljucevi.iterator();
+
+		while (iterator.hasNext()) {
+			Integer kljuc = iterator.next();
+			String vrednost = sifraArtikla.get(kljuc);
+			System.out.println("Šifra: " + kljuc + ", Artikal: " + vrednost);
+		}
+
+	}
+}

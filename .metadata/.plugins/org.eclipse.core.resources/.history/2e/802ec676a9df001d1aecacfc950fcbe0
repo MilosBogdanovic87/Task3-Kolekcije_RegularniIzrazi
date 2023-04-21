@@ -1,0 +1,21 @@
+package milosbogdanovic;
+
+import java.util.Vector;
+
+public class MainVector {
+
+	public static void main(String[] args) {
+
+		Vector<String> spisakFilmova = new Vector<String>();
+
+		// dodavanje u listu
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("1. Dodavanje u listu: ugrađena metoda .add");
+		System.out.println("----------------------------------------------------------------------------------------");
+		spisakFilmova.add("Kum");
+		spisakFilmova.add("Matriks");
+		spisakFilmova.add("Paklene ulice");
+
+	}
+
+}

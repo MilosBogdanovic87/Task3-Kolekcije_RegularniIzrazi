@@ -1,0 +1,31 @@
+package milosbogdanovic;
+
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class MainRegularExpressions  {
+    public static void main(String[] args) {
+        // Kreiramo listu artikala sa cenama
+        ArrayList<String> artikli = new ArrayList<>();
+        artikli.add("Patike, cena: 6000 din");
+        artikli.add("Ranac, cena: 4500 din");
+        artikli.add("Majica, cena: 3000 din");
+        artikli.add("Farmerke, cena: 8000 din");
+        artikli.add("Jakna, cena: 10000 din");
+
+        // Kreiramo regularni izraz za cenu od 3000 dinara
+        String regCena = "\\b3000\\b";
+
+        // Pretražujemo sve artikle po regex-u
+        for (String artikal : artikli) {
+            Pattern pattern = Pattern.compile(regCena);
+            Matcher pretragaCene = pattern.matcher(artikal);
+
+            // Ako nađemo odgovarajući artikal ispisujemo ga
+            if (pretragaCene.find()) {
+                System.out.println(artikal);
+            }
+        }
+    }
+}

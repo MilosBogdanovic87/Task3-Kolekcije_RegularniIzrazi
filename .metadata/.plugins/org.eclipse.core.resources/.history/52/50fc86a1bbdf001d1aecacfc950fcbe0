@@ -1,0 +1,38 @@
+package milosbogdanovic;
+
+import java.util.*;
+
+public class MainSortedMap {
+    public static void main(String[] args) {
+
+    	
+    	SortedMap<Integer, String> itemCodes = new TreeMap<Integer, String>();
+        
+    	
+    	itemCodes.put(1001, "Jabuka");
+        itemCodes.put(1002, "Kruška");
+        itemCodes.put(1003, "Banana");
+        itemCodes.put(1004, "Narandža");
+
+        // Ispis svih stavki na kasi
+        System.out.println("Artikli na kasi: ");
+        for (Map.Entry<Integer, String> entry : itemCodes.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+        
+        // Prikaz prvog artikla na kasi
+        System.out.println("Prvi artikal na kasi: " + itemCodes.firstKey() + " - " + itemCodes.get(itemCodes.firstKey()));
+
+        // Prikaz poslednjeg artikla na kasi
+        System.out.println("Poslednji artikal na kasi: " + itemCodes.lastKey() + " - " + itemCodes.get(itemCodes.lastKey()));
+
+        // Prikaz svih artikala sa šifrom manjom od 1003
+        SortedMap<Integer, String> subMap = itemCodes.headMap(1003);
+        System.out.println("Artikli sa šifrom manjom od 1003: ");
+        for (Map.Entry<Integer, String> entry : subMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}
+
+}

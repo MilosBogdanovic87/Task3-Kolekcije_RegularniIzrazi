@@ -1,0 +1,59 @@
+package milosbogdanovic;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainArrayList {
+
+	public static void main(String[] args) {
+
+		List<String> spisakUdruzenja = new ArrayList<String>();
+
+		// dodavanje u listu
+		System.out.println("------------------------------------------------------");
+		System.out.println("1. Dodavanje u listu: ugrađena metoda .add");
+		System.out.println("------------------------------------------------------");
+		spisakUdruzenja.add("Udruženje pčelara Beograd");
+		spisakUdruzenja.add("Matica Niš");
+		spisakUdruzenja.add("Udruženje pčelara Novi Sad");
+
+		System.out.println("------------------------------------------------------");
+		System.out.println("2. Dodavanje u listu na određenu poziciju: ugrađena metoda .add(index, element)");
+		System.out.println("------------------------------------------------------");
+		spisakUdruzenja.add(3, "Udruženje pčelara Bor");
+
+		// prolazak kroz listu unapređenom for petljom
+		System.out.println("------------------------------------------------------");
+		System.out.println("3. Prolazak kroz listu unapređenom for petljom: ");
+		System.out.println("------------------------------------------------------");
+		for (String s : spisakUdruzenja) {
+			System.out.println(s);
+		}
+
+		// Vraćanje elementa sa zadate pozicije
+		System.out.println("------------------------------------------------------");
+		System.out.println("4. Ugrađena metoda .get vraća element sa zadate pozicije");
+		System.out.println("------------------------------------------------------");
+		System.out.println(spisakUdruzenja.get(2));
+
+		// Provera da li je lista prazna ili nije
+		System.out.println("------------------------------------------------------");
+		System.out.println("5. Provera da li je lista prazna: ugrađena metoda .isEmpty");
+		System.out.println("------------------------------------------------------");
+		if (spisakUdruzenja.isEmpty()) {
+			System.out.println("Lista udruženja je prazna.");
+		} else {
+			System.out.println("Lista udruženja nije prazna.");
+		}
+		
+		String[] nizUdruzenje = new String[spisakUdruzenja.size()];
+		spisakUdruzenja.toArray(nizUdruzenje);
+		
+		for(String s : nizUdruzenje) {
+			System.out.print(s + " ");
+		}
+		
+
+	}
+
+}

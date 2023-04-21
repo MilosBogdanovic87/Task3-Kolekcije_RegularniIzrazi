@@ -1,0 +1,37 @@
+package milosbogdanovic;
+
+import java.util.TreeMap;
+
+public class MainTreeMap {
+	public static void main(String[] args) {
+		
+		TreeMap<String, Integer> bokseri = new TreeMap<>();
+		
+		// Dodajemo boksera i broj osvojenih titula
+        bokseri.put("Muhammad Ali", 56);
+        bokseri.put("Mike Tyson", 50);
+        bokseri.put("Floyd Mayweather Jr.", 50);
+
+        // Vraćamo broj titula za određenog boksera
+        int titule = bokseri.get("Muhammad Ali");
+        System.out.println("Muhammad Ali je osvojio " + titule + " titula.");
+
+        // Vraćamo broj elemenata u mapi
+        int brojElemenata = bokseri.size();
+        System.out.println("Broj elemenata u mapi: " + brojElemenata);
+
+        // Proveravamo da li postoji bokser u mapi
+        boolean postojiBokser = bokseri.containsKey("Mike Tyson");
+        System.out.println("Postoji Mike Tyson: " + postojiBokser);
+
+        // Uklanjamo boksera iz mape
+        bokseri.remove("Floyd Mayweather Jr.");
+        System.out.println("Uklonili smo Floyd Mayweather Jr. iz mape.");
+
+        // Proveravamo da li mapa sadrži vrednost
+        boolean sadrziVrednost = bokseri.containsValue(56);
+        System.out.println("Mapa sadrži vrednost 56: " + sadrziVrednost);
+		
+	}
+
+}

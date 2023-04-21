@@ -1,0 +1,23 @@
+package milosbogdanovic;
+
+import java.util.regex.*;
+
+public class Main {
+  public static void main(String[] args) {
+    String text = "Ovo je neki tekst 123.";
+    String pattern = ".*tekst.*";
+
+    // Kompajliramo regex pattern
+    Pattern p = Pattern.compile(pattern);
+
+    // Napravimo matcher na osnovu teksta
+    Matcher m = p.matcher(text);
+
+    // Proverimo da li matcher sadrži pattern
+    if (m.matches()) {
+      System.out.println("Pronađen tekst: " + m.group());
+    } else {
+      System.out.println("Nije pronađen tekst.");
+    }
+  }
+}
